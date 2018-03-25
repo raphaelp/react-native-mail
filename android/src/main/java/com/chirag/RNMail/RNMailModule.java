@@ -94,7 +94,7 @@ public class RNMailModule extends ReactContextBaseJavaModule {
       for (int keyIndex = 0; keyIndex < length; keyIndex++) {
         ReadableMap clip = r.getMap(keyIndex);
         if (clip.hasKey("path") && !clip.isNull("path")) {
-          String path = attachment.getString("path");
+          String path = clip.getString("path");
           Uri p;
           // Check for valid URI
           if (URLUtil.isValidUrl(path)) {
